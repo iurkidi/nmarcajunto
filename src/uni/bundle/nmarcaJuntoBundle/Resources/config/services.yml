@@ -1,0 +1,4 @@
+services:
+#    uni_nmarca_junto.example:
+#        class: uni\bundle\nmarcaJuntoBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

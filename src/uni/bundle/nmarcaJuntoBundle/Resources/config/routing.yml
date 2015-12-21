@@ -1,0 +1,15 @@
+uni_nmarca_junto_comentarios:
+    resource: "@uniNmarcaJuntoBundle/Resources/config/routing/comentarios.yml"
+    prefix:   /comentarios
+
+uni_nmarca_junto_categorias:
+    resource: "@uniNmarcaJuntoBundle/Resources/config/routing/categorias.yml"
+    prefix:   /categorias
+
+uni_nmarca_junto_noticias:
+    resource: "@uniNmarcaJuntoBundle/Resources/config/routing/noticias.yml"
+    prefix:   /noticias
+
+uni_nmarcajunto_homepage:
+    path:     /
+    defaults: { _controller: uniNmarcaJuntoBundle:Default:index }

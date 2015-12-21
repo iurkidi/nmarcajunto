@@ -1,0 +1,4 @@
+uni_nmarcajunto:
+    resource: "@uniNmarcaJuntoBundle/Resources/config/routing.yml"
+    prefix:   /
+

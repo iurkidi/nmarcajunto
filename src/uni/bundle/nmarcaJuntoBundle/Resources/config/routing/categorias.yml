@@ -1,0 +1,30 @@
+categorias:
+    path:     /
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:index" }
+
+categorias_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:show" }
+
+categorias_new:
+    path:     /new
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:new" }
+
+categorias_create:
+    path:     /create
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:create" }
+    requirements: { _method: post }
+
+categorias_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:edit" }
+
+categorias_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:update" }
+    requirements: { _method: post|put }
+
+categorias_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniNmarcaJuntoBundle:categorias:delete" }
+    requirements: { _method: post|delete }
