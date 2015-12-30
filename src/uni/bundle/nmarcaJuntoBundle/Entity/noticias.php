@@ -68,7 +68,7 @@ class noticias
     protected $comentarioss;
 
     public function __construct() {
-        $this->noticias = new ArrayCollection();
+        $this->comentarioss = new ArrayCollection();
     }
 
 
@@ -200,4 +200,61 @@ class noticias
     public function __toString() {
      return $this->titulo;
     }
+
+    /**
+     * Set categoria
+     *
+     * @param \uni\bundle\nmarcaJuntoBundle\Entity\categorias $categoria
+     * @return noticias
+     */
+    public function setCategoria(\uni\bundle\nmarcaJuntoBundle\Entity\categorias $categoria = null)
+    {
+        $this->categoria = $categoria;
+
+        return $this;
+    }
+
+    /**
+     * Get categoria
+     *
+     * @return \uni\bundle\nmarcaJuntoBundle\Entity\categorias 
+     */
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+
+    /**
+     * Add comentarioss
+     *
+     * @param \uni\bundle\nmarcaJuntoBundle\Entity\comentarios $comentarioss
+     * @return noticias
+     */
+    public function addComentarioss(\uni\bundle\nmarcaJuntoBundle\Entity\comentarios $comentarioss)
+    {
+        $this->comentarioss[] = $comentarioss;
+
+        return $this;
+    }
+
+    /**
+     * Remove comentarioss
+     *
+     * @param \uni\bundle\nmarcaJuntoBundle\Entity\comentarios $comentarioss
+     */
+    public function removeComentarioss(\uni\bundle\nmarcaJuntoBundle\Entity\comentarios $comentarioss)
+    {
+        $this->comentarioss->removeElement($comentarioss);
+    }
+
+    /**
+     * Get comentarioss
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getComentarioss()
+    {
+        return $this->comentarioss;
+    }
+    
 }

@@ -156,4 +156,31 @@ class comentarios
     {
         return $this->fecha;
     }
+    
+    /**
+     * Set noticia
+     *
+     * @param \uni\bundle\marcaBundle\Entity\noticias $noticia
+     * @return comentarios
+     */
+    public function setNoticia(\uni\bundle\nmarcaJuntoBundle\Entity\noticias $noticia = null)
+    {
+        $this->noticia = $noticia;
+
+        return $this;
+    }
+
+    /**
+     * Get noticia
+     *
+     * @return \uni\bundle\marcaBundle\Entity\noticias 
+     */
+    public function getNoticia()
+    {
+        return $this->noticia;
+    }
+    
+    public function __toString() {
+     return $this->titulo;
+    }
 }

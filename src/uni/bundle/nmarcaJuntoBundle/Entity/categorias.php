@@ -76,4 +76,37 @@ class categorias
     public function __toString() {
      return $this->nombreCat;
     }
+
+    /**
+     * Add noticiass
+     *
+     * @param \uni\bundle\nmarcaJuntoBundle\Entity\noticias $noticiass
+     * @return categorias
+     */
+    public function addNoticiass(\uni\bundle\nmarcaJuntoBundle\Entity\noticias $noticiass)
+    {
+        $this->noticiass[] = $noticiass;
+
+        return $this;
+    }
+
+    /**
+     * Remove noticiass
+     *
+     * @param \uni\bundle\nmarcaJuntoBundle\Entity\noticias $noticiass
+     */
+    public function removeNoticiass(\uni\bundle\nmarcaJuntoBundle\Entity\noticias $noticiass)
+    {
+        $this->noticiass->removeElement($noticiass);
+    }
+
+    /**
+     * Get noticiass
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getNoticiass()
+    {
+        return $this->noticiass;
+    }
 }

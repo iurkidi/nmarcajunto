@@ -27,10 +27,18 @@
             </tr>
             <tr>
                 <th>Fechapub</th>
-                <td>{{ entity.fechaPub|date('Y-m-d H:i:s') }}</td>
+                <td>{{ entity.fechaPub|date('Y-m-d') }}</td>
             </tr>
         </tbody>
     </table>
+         
+            <h1>Comentarios</h1>
+            
+            {% for coment in entity.comentarioss %}
+            <p class="negrita">({{ coment.fecha|date('Y-m-d') }} - {{ coment.nick }}) {{ coment.titulo }}</p>  
+            <p>{{ coment.descripcion }}</p>
+        {% endfor %}
+            
 
         <ul class="record_actions">
     <li>
@@ -41,6 +49,11 @@
     <li>
         <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">
             Edit
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('comentarios_new') }}">
+            Nuevo comentario
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
