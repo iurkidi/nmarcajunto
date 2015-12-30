@@ -1,4 +1,0 @@
-services:
-#    uni_junto.example:
-#        class: uni\bundle\uniJuntoBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]

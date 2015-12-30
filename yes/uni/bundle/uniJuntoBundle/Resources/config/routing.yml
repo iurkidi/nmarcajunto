@@ -1,3 +1,0 @@
-uni_junto_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: uniJuntoBundle:Default:index }
